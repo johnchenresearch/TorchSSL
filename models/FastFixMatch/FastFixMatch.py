@@ -12,7 +12,7 @@ import os
 import contextlib
 from train_utils import AverageMeter
 
-from .flexmatch_utils import consistency_loss, Get_Scalar
+from .FastFixMatch_utils import consistency_loss, Get_Scalar
 from train_utils import ce_loss, wd_loss, EMA, Bn_Controller
 
 from sklearn.metrics import *
