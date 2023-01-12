@@ -12,14 +12,14 @@ import os
 import contextlib
 from train_utils import AverageMeter
 
-from .FastFixMatch_utils import consistency_loss, Get_Scalar
+from .fastfixmatch_utils import consistency_loss, Get_Scalar
 from train_utils import ce_loss, wd_loss, EMA, Bn_Controller
 
 from sklearn.metrics import *
 from copy import deepcopy
 
 
-class FlexMatch:
+class FastFixMatch:
     def __init__(self, net_builder, num_classes, ema_m, T, p_cutoff, lambda_u, \
                  hard_label=True, t_fn=None, p_fn=None, it=0, num_eval_iter=1000, tb_log=None, logger=None):
         """
